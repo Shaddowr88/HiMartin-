@@ -7,12 +7,13 @@ function Element(props) {
 
         <View style={styles.header}>
             <View style={styles.SpanElement}>
-                <Text> M </Text>
+                <Text>{props.letter} </Text>
             </View>
             <Text style={styles.textSpanElement}> {props.headerElement} </Text>
         </View>
             <View style={styles.header}>
-                <Text>Open up App.js to start working on your app!
+
+                <Text style={{color:'#ffffffff'}}>Open up App.js to start working on your app!
                     tthdrhgfjhfgdjhfgj sdfhfdgh dfgh rdfhfgd j</Text>
             </View>
     </View>
@@ -24,10 +25,9 @@ const styles = StyleSheet.create({
     element:{
         flex:1,
         borderRadius:20,
-        backgroundColor:'rgba(9,9,9,0.31)',
+        backgroundColor:'rgb(9,9,9)',
         alignItems: 'center',
         justifyContent: 'space-around',
-        color:'#fff',
         marginEnd:10,
 
 
@@ -59,19 +59,19 @@ const styles = StyleSheet.create({
         padding:'3%',
         fontSize: 15,
         fontWeight: 'bold',
-        marginBottom: 5,
+       // marginBottom: 5,
     },
 
     SpanElement:{
         width:50,
         height:50,
         borderRadius:10,
-        backgroundColor:'rgba(9,9,9,0.31)',
+        backgroundColor:'rgb(255,255,255)',
         alignItems: 'center',
         justifyContent: 'center',
         color:'#fff',
         marginTop:'auto',
-        marginBottom:'auto',
+        //marginBottom:'auto',
 
     },
 

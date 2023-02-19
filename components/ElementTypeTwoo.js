@@ -1,16 +1,23 @@
-import {StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, View} from "react-native";
+import {useNavigation} from "@react-navigation/native";
 
 
-function ElementType(props) {
+function ElementType(props, screenName) {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.element}>
             <View style={styles.header}>
             <View style={styles.SpanElement}>
-                <Text> M </Text>
+                <Text style={{fontWeight:"bold", fontSize:20, color:"#ffffff"}}> {props.letter} </Text>
             </View>
             <Text style={styles.textSpanElement}> {props.headerElement} </Text>
-                <View >
-                    <Text> • </Text>
+                <View title={`Go to ${screenName}`}
+                      onPress={() => navigation.navigate(screenName)} >
+                    <Image source={require('../assets/pointBlack.png')}
+                           style={{height:30, width:10}}
+                           title={`Go to ${screenName}`}
+                           onPress={() => navigation.navigate(screenName)}/>
                 </View>
         </View>
         </View>
@@ -44,7 +51,7 @@ const styles = StyleSheet.create({
         width:50,
         height:50,
         borderRadius:10,
-        backgroundColor:'rgba(9,9,9,0.31)',
+        backgroundColor:'rgb(9,9,9)',
         alignItems: 'center',
         justifyContent: 'center',
      //   color:'#fff',

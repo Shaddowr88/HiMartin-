@@ -11,9 +11,9 @@ export default function App() {
   return (
       <NavigationContainer>
           <Stack.Navigator>
-              <Stack.Screen name="Concenteur" component={ConcenteurScreen}   />
               <Stack.Screen options={{headerShown: false}} name="Home" component={HomeScreen} />
-
+              <Stack.Screen options={{headerShown: false}} name="Concenteur" component={ConcenteurScreen}   />
+              <Stack.Screen options={{headerShown: false}} name="user" component={ConcenteurScreen}/>
               <Stack.Screen name="Finder" component={FinderScreen} />
           </Stack.Navigator>
       </NavigationContainer>
