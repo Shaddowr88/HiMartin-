@@ -1,91 +1,76 @@
-import {StyleSheet, Text, View} from "react-native";
+import {Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native";
+import H1 from "../components/H1";
+import Paragraph from "../components/Paragraph";
+import {StatusBar} from "expo-status-bar";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from "react-native-screens/native-stack";
+import BtnPlein from "../components/BtnPlein";
 
 
-function Element(props) {
+function HomeScreen({ navigation }) {
     return (
-        <View style={styles.element}>
+        <View style={styles.container}>
 
-        <View style={styles.header}>
-            <View style={styles.SpanElement}>
-                <Text> M </Text>
+            <Image source={require('../assets/img/imgOne.jpg')}
+                   style={styles.hero}
+            />
+            <View style={{width:'90%', justifyContent:'space-around', paddingBottom:'15%'}}>
+                <H1  h1='psam vero urbem Byzanti' TexteColor='#ffffff'/>
+                <H1  h1='ornatissimam signis' TexteColor='#ffffff' graisse='bold'/>
+                <Paragraph
+                    TexteColor='#ffffff'
+                    content='Hey Guys, Hope You all doing well today I want to share my new shot for.
+                    What do you think? Please leave any feedback and dont forget to like if you love it.
+                    You can hire me…'
+                />
+
+                <View >
+                    <View style={styles.button}>
+                        <Text
+                            title="Go to Details"
+                            onPress={() => navigation.navigate('Concenteur')}
+                        > Concenteur </Text>
+                    </View>
+
+
+                </View>
             </View>
-            <Text style={styles.textSpanElement}> {props.headerElement} </Text>
+            <StatusBar style="auto" />
         </View>
-            <View style={styles.header}>
-                <Text>Open up App.js to start working on your app!
-                    tthdrhgfjhfgdjhfgj sdfhfdgh dfgh rdfhfgd j</Text>
-            </View>
-    </View>
     );
 }
 
 const styles = StyleSheet.create({
 
-    element:{
-        flex:1,
-        borderRadius:20,
-        backgroundColor:'rgba(9,9,9,0.31)',
+    container: {
+        //flex: 2,
+        height:'100%',
         alignItems: 'center',
-        justifyContent: 'space-around',
-        color:'#fff',
-        marginEnd:10,
-
-
+        justifyContent: 'space-between',
+        padding:2,
+        backgroundColor:'#FA7712',
     },
 
-    header1:{
-        fontSize: 25,
-        fontWeight: 'bold',
-        marginTop: 10,
-        marginBottom: 10,
-    },
+    hero: {
+        height:'60%',
+        width:'110%',
+        alignSelf:' strech',
+        marginStart:-10,
+        marginTop:-10,
+        marginBottom:20},
 
-    header2:{
-        fontSize: 18,
-        fontWeight: 'strong',
-        marginBottom: 5,
-    },
-
-    header3:{
-        fontSize: 15,
-        fontWeight: 'bold',
-        marginBottom: 5,
-    },
-
-    header:{
-        gap: 4,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        padding:'3%',
-        fontSize: 15,
-        fontWeight: 'bold',
-        marginBottom: 5,
-    },
-
-    SpanElement:{
-        width:50,
-        height:50,
-        borderRadius:10,
-        backgroundColor:'rgba(9,9,9,0.31)',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color:'#fff',
-        marginTop:'auto',
-        marginBottom:'auto',
-
-    },
-
-    textSpanElement:{
-
-        textAlign: 'auto',
-        color:'#fff',
-        width:'75%',
-        marginStart:'5%',
-        marginTop:'auto',
-        marginBottom:'auto',
-
+    button: {
+        //height:'60%',
+        width:100,
+        alignItems:'center',
+        alignSelf:' strech',
+        backgroundColor:'#ffffff',
+        marginTop:10,
+        padding:10,
+        borderRadius:5,
     },
 
 });
 
-export default Element;
+
+export default HomeScreen;

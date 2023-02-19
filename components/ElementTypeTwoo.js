@@ -1,21 +1,19 @@
 import {StyleSheet, Text, View} from "react-native";
 
 
-function Element(props) {
+function ElementType(props) {
     return (
         <View style={styles.element}>
-
-        <View style={styles.header}>
+            <View style={styles.header}>
             <View style={styles.SpanElement}>
                 <Text> M </Text>
             </View>
             <Text style={styles.textSpanElement}> {props.headerElement} </Text>
+                <View >
+                    <Text> • </Text>
+                </View>
         </View>
-            <View style={styles.header}>
-                <Text>Open up App.js to start working on your app!
-                    tthdrhgfjhfgdjhfgj sdfhfdgh dfgh rdfhfgd j</Text>
-            </View>
-    </View>
+        </View>
     );
 }
 
@@ -24,32 +22,12 @@ const styles = StyleSheet.create({
     element:{
         flex:1,
         borderRadius:20,
-        backgroundColor:'rgba(9,9,9,0.31)',
         alignItems: 'center',
         justifyContent: 'space-around',
-        color:'#fff',
+        //color:'#fff',
         marginEnd:10,
 
 
-    },
-
-    header1:{
-        fontSize: 25,
-        fontWeight: 'bold',
-        marginTop: 10,
-        marginBottom: 10,
-    },
-
-    header2:{
-        fontSize: 18,
-        fontWeight: 'strong',
-        marginBottom: 5,
-    },
-
-    header3:{
-        fontSize: 15,
-        fontWeight: 'bold',
-        marginBottom: 5,
     },
 
     header:{
@@ -57,7 +35,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         padding:'3%',
-        fontSize: 15,
+        fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 5,
     },
@@ -69,7 +47,7 @@ const styles = StyleSheet.create({
         backgroundColor:'rgba(9,9,9,0.31)',
         alignItems: 'center',
         justifyContent: 'center',
-        color:'#fff',
+     //   color:'#fff',
         marginTop:'auto',
         marginBottom:'auto',
 
@@ -78,7 +56,7 @@ const styles = StyleSheet.create({
     textSpanElement:{
 
         textAlign: 'auto',
-        color:'#fff',
+       // color:'#fff',
         width:'75%',
         marginStart:'5%',
         marginTop:'auto',
@@ -88,4 +66,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Element;
+export default ElementType;

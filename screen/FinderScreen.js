@@ -1,12 +1,12 @@
 import {SafeAreaView, Text} from "react-native";
 
-function ConcenteurScreen() {
+function FinderScreen() {
     return (
         <SafeAreaView>
-<Text> Concenteur</Text>
+<Text> Finder</Text>
         </SafeAreaView>
     );
 }
 
 
-export default ConcenteurScreen;
+export default FinderScreen;
